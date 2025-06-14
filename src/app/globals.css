@@ -19,25 +19,20 @@
     --foreground: #ededed;
   }
 }
-
 body {
-
-  background-image: url("../../public/Untitled\ design.png");
+  background-image: url("../../public/Untitled\ design4.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: c;
+  background-color: #000814;
+  
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.about{
+  background-color: #000814;
 }
 
-.animate {
-  animation: spin 10s linear infinite;
+.blur-container {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(10px);          /* blur behind the div */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  padding: 20px;
 }

@@ -11,29 +11,38 @@ import react from '../../../public/React-removebg-preview.png'
 import nextjs from '../../../public/images-removebg-preview.png'
 import tailwind from '../../../public/images__2_-removebg-preview.png'
 import github from '../../../public/RuHOJDaVPJ.png'
+import mypicture from '../../../public/WhatsApp Image 2025-06-08 at 16.47.49_071c7702.png'
 export default function Header() {
     return (
-        <div className="flex ">
+        <div className="flex h-[500px]">
             <div className="flex ml-15 mt-10">
-                <hr className="  w-[1px] h-[300px] border-none  bg-white"></hr>
-                <div className="ml-10">
-                    <p className="text-white font-bold text-[60px] font-[Kulim Park]">Hi , I’m  <span ><span className="text-[#110583]">A</span>bdeldjalil</span></p>
-                    <p className="text-[#BAB7B7] font-[Kulim Park] text-[40px] font-bold"><span className="text-[#110583]">S</span>oftware</p>
-                    <p className="text-[#BAB7B7] font-[Kulim Park] text-[40px] font-bold ml-20"><span className="text-[#110583]">E</span>ngineer</p>
-                    <Image className="w-[139px] h-[120px] ml-20" src={pc}></Image>
+                {/* <hr className="  w-[1px] h-[300px] border-none  bg-white"></hr> */}
+                <div className="ml-10 mt-20">
+                    <p className="text-white font-bold text-[60px] font-[Kulim Park]">Hi, I’m Abdeldjalil</p>
+                    {/* <p className="text-[#BAB7B7] font-[Kulim Park] text-[40px] font-bold"><span className="text-[#110583]">S</span>oftware</p> */}
+                    <p className="ml-20">
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFC300]">S</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFD60A]">o</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFDE3B]">f</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFE562]">t</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFEA81]">w</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFEE9A]">a</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFF1AE]">r</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FAF2CA]">e</span>
+                    </p>
+                    <p className="ml-40">
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFC300]">E</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFD60A]">n</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFDE3B]">g</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFE562]">i</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFEA81]">n</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFEE9A]">e</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFF1AE]">e</span>
+                        <span className="font-bold text-[60px] font-[Kulim Park] text-[#FAF2CA]">r</span>
+                    </p>
                 </div>
-                
-                <Image className="   w-120 h-120  ml-180 top-20 absolute " src={network}></Image>
+                <Image className="   w-90 h-90  ml-200 top-40 absolute " src={mypicture}></Image>
             </div>
-            <Image  src={html} className=" w-[70px] h-[70px] absolute top-27 right-56.5"/>
-            <Image src={css} className="w-[70px] h-[70px] absolute top-37 right-83"/>
-            <Image src={js} className="w-[70px] h-[70px] absolute top-64 right-95"/>
-            <Image src={ts} className="w-[50px] h-[50px] absolute top-97 right-90 rounded-full"/>
-            <Image src={figma} className="w-[60px] h-[60px] absolute top-110 right-56.5"/>
-            <Image src={tailwind} className="w-[70px] h-[70px] absolute top-39 right-30"/>
-            <Image src={react} className="w-[60px] h-[60px] absolute top-68 right-20"/>
-            <Image src={nextjs} className="w-[50px] h-[50px] absolute top-99 right-30  "/>
-            <Image src={github} className="w-[70px] h-[70px] absolute top-67 right-56.5 rounded-full"/>
         </div>
     );
 }
