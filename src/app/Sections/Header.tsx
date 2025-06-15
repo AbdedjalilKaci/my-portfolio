@@ -12,14 +12,42 @@ import nextjs from '../../../public/images-removebg-preview.png'
 import tailwind from '../../../public/images__2_-removebg-preview.png'
 import github from '../../../public/RuHOJDaVPJ.png'
 import mypicture from '../../../public/WhatsApp Image 2025-06-08 at 16.47.49_071c7702.png'
+import { useEffect, useState } from 'react'
 export default function Header() {
+
+    const texts = [
+        'React/Next.js developer',
+        'I build web applications',
+        'I love clean code',
+        'I design websites',
+    ]
+
+    const [textIndex, setTextIndex] = useState(0)
+    const [displayText, setDisplayText] = useState('')
+    const [charIndex, setCharIndex] = useState(0)
+
+    useEffect(() => {
+        if (charIndex < texts[textIndex].length) {
+            const timeout = setTimeout(() => {
+                setDisplayText((prev) => prev + texts[textIndex][charIndex])
+                setCharIndex((prev) => prev + 1)
+            }, 100)
+            return () => clearTimeout(timeout)
+        } else {
+            const timeout = setTimeout(() => {
+                setCharIndex(0)
+                setDisplayText('')
+                setTextIndex((prev) => (prev + 1) % texts.length)
+            }, 1500) // wait before showing next sentence
+            return () => clearTimeout(timeout)
+        }
+    }, [charIndex, textIndex])
+
     return (
         <div className="flex h-[500px]">
             <div className="flex ml-15 mt-10">
-                {/* <hr className="  w-[1px] h-[300px] border-none  bg-white"></hr> */}
-                <div className="ml-10 mt-20">
+                <div className="ml-10 mt-10">
                     <p className="text-white font-bold text-[60px] font-[Kulim Park]">Hi, I’m Abdeldjalil</p>
-                    {/* <p className="text-[#BAB7B7] font-[Kulim Park] text-[40px] font-bold"><span className="text-[#110583]">S</span>oftware</p> */}
                     <p className="ml-20">
                         <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFC300]">S</span>
                         <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFD60A]">o</span>
@@ -40,8 +68,12 @@ export default function Header() {
                         <span className="font-bold text-[60px] font-[Kulim Park] text-[#FFF1AE]">e</span>
                         <span className="font-bold text-[60px] font-[Kulim Park] text-[#FAF2CA]">r</span>
                     </p>
+                    <div className="text-5xl font-bold text-white h-12">
+                        {displayText}
+                        <span className="animate-pulse">|</span>
+                    </div>
                 </div>
-                <Image className="   w-90 h-90  ml-200 top-40 absolute " src={mypicture}></Image>
+                <Image className="   w-90 h-90  ml-180 top-30 absolute " src={mypicture}></Image>
             </div>
         </div>
     );
